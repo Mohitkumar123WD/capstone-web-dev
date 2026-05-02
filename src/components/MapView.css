@@ -1,0 +1,155 @@
+.map-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.transport-map {
+  height: 100vh;
+  width: 100%;
+}
+
+.route-sidebar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  width: min(420px, calc(100% - 32px));
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.22);
+  padding: 20px;
+  backdrop-filter: blur(16px);
+}
+
+.route-sidebar h2 {
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 1.3rem;
+}
+
+.route-sidebar p {
+  margin: 0;
+  color: #374151;
+  line-height: 1.65;
+}
+
+.route-sidebar form {
+  display: grid;
+  gap: 12px;
+}
+
+.route-sidebar label {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  font-weight: 700;
+  color: #111827;
+}
+
+.route-sidebar select,
+.route-sidebar button {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: #f8fafc;
+  color: #111827;
+  font: inherit;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.route-sidebar select {
+  appearance: none;
+}
+
+.route-sidebar button {
+  cursor: pointer;
+  background: #2f67ff;
+  color: white;
+  border-color: transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.route-sidebar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(47, 103, 255, 0.18);
+}
+
+.route-preview {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #eff6ff;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.route-preview strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.route-preview p,
+.route-summary span {
+  color: #1f2937;
+}
+
+.route-summary {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.route-highlight {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.route-highlight span {
+  background: rgba(47, 103, 255, 0.12);
+  color: #1847b5;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+.vehicle-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1d4ed8;
+  box-shadow: 0 0 0 3px white, 0 12px 22px rgba(15, 23, 42, 0.16);
+  color: white;
+  font-size: 16px;
+}
+
+.stop-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 0 3px white, 0 10px 18px rgba(15, 23, 42, 0.14);
+  color: white;
+  font-size: 14px;
+}
+
+.leaflet-container {
+  border-radius: 0;
+}
+
+@media (max-width: 880px) {
+  .route-sidebar {
+    width: calc(100% - 24px);
+    left: 12px;
+    top: 12px;
+    padding: 14px;
+  }
+}
